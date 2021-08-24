@@ -1,0 +1,21 @@
+"""Various Colors"""
+enum Color {
+  black
+  blue
+  gray
+  green
+  orange
+  purple
+  red
+  white
+  yellow
+}
+
+type Grid {
+  colors: [[Color]]!
+  id: Int!
+}
+
+type Query {
+  grids: [Grid!]!
+}

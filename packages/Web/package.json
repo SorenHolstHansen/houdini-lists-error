@@ -1,0 +1,25 @@
+{
+	"name": "@example/web",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "svelte-kit dev",
+		"build": "svelte-kit build",
+		"preview": "svelte-kit preview",
+		"check": "svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch"
+	},
+	"devDependencies": {
+		"@sveltejs/kit": "next",
+		"houdini": "^0.10.4",
+		"houdini-preprocess": "^0.10.4",
+		"svelte": "^3.34.0",
+		"svelte-check": "^2.0.0",
+		"svelte-preprocess": "^4.7.4",
+		"tslib": "^2.0.0",
+		"typescript": "^4.1.3"
+	},
+	"type": "module",
+	"dependencies": {
+		"classnames": "^2.3.1"
+	}
+}

@@ -1,0 +1,11 @@
+bin
+node_modules
+dist
+build
+.next
+storybook-static
+lerna-debug.log
+coverage
+.DS_Store
+.idea
+yarn-error.log

@@ -1,0 +1,17 @@
+{
+	"name": "example",
+	"workspaces": [
+		"packages/*"
+	],
+	"license": "UNLICENSED",
+	"private": true,
+	"devDependencies": {
+		"lerna": "^4.0.0"
+	},
+	"scripts": {
+		"test": "lerna run test",
+		"new-version": "lerna version --conventional-commits --yes",
+		"diff": "lerna diff",
+		"build:web": "NODE_ENV=production lerna run build --scope={@example/web}"
+	}
+}
