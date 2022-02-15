@@ -1,24 +1,18 @@
 <script lang="ts">
-	import { graphql, query, Grids } from '$houdini';
+	import { graphql, paginatedQuery } from '$houdini';
 
-	const { data: gridData } = query<Grids>(graphql`
-		query Grids {
-			grids {
-				id
-				colors
+	const { loadNextPage, data } = paginatedQuery(graphql`
+		query Groceries {
+			paginatedGroceries(first: 10) @paginate(name: "SomeName") {
+				edges {
+					node {
+						id
+						name
+					}
+				}
 			}
 		}
 	`);
 
-	$: console.log('data', $gridData);
+	$: console.log({ data: $data });
 </script>
-
-<div class="flex flex-wrap justify-around">
-	{#each $gridData.grids as grid}
-		{#if grid.colors}
-			{#each grid.colors as color}
-				<li>{color}</li>
-			{/each}
-		{/if}
-	{/each}
-</div>

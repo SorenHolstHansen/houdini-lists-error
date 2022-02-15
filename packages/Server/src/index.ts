@@ -3,7 +3,7 @@ import cors from 'cors';
 import express from 'express';
 import 'reflect-metadata';
 import { buildSchema } from 'type-graphql';
-import { GridResolver } from './resolvers/grid';
+import { GroceryResolver } from './resolver';
 
 const main = async () => {
 	const app = express();
@@ -17,7 +17,7 @@ const main = async () => {
 
 	const apolloServer = new ApolloServer({
 		schema: await buildSchema({
-			resolvers: [GridResolver],
+			resolvers: [GroceryResolver],
 			validate: false,
 		}),
 	});

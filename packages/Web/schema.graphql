@@ -1,21 +1,22 @@
-"""Various Colors"""
-enum Color {
-  black
-  blue
-  gray
-  green
-  orange
-  purple
-  red
-  white
-  yellow
+type Grocery {
+  id: Int!
+  name: String!
 }
 
-type Grid {
-  colors: [[Color]]!
-  id: Int!
+type GroceryEdge {
+  cursor: Int!
+  node: Grocery!
+}
+
+type PageInfo {
+  hasNextPage: Boolean!
+}
+
+type PaginatedGroceries {
+  edges: [GroceryEdge!]!
+  pageInfo: PageInfo!
 }
 
 type Query {
-  grids: [Grid!]!
+  paginatedGroceries(after: Float!, first: Float!): PaginatedGroceries!
 }

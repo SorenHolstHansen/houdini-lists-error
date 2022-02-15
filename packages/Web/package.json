@@ -10,8 +10,8 @@
 	},
 	"devDependencies": {
 		"@sveltejs/kit": "next",
-		"houdini": "^0.10.4",
-		"houdini-preprocess": "^0.10.4",
+		"houdini": "^0.12.1",
+		"houdini-preprocess": "^0.12.2",
 		"svelte": "^3.34.0",
 		"svelte-check": "^2.0.0",
 		"svelte-preprocess": "^4.7.4",
